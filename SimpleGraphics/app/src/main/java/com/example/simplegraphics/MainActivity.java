@@ -32,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
             Paint paint2 = new Paint();
             Paint square = new Paint();
             Paint line = new Paint();
+            line.setTextSize(40f);
             line.setColor(Color.RED);
+            line.setStrokeWidth(5);
             paint.setColor(Color.CYAN);
             paint2.setColor(Color.GREEN);
             square.setColor(Color.rgb(200 , 120 , 110));
