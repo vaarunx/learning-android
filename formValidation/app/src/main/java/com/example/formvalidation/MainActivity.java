@@ -2,6 +2,7 @@ package com.example.formvalidation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (username.getText().toString().matches("[a-zA-Z]+") && pin.getText().toString().matches("[0-9]+") && pin.getText().toString().length() == 4){
             Toast t= Toast.makeText(getApplicationContext(),"Successfully Validated" , Toast.LENGTH_SHORT);
             t.show();
+            Intent intent = new Intent(getApplicationContext() , MainActivity2.class);
+            startActivity(intent);
         }
         else{
             Toast t= Toast.makeText(getApplicationContext(),"Please Check your username and pin!" , Toast.LENGTH_SHORT);
@@ -38,4 +41,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //etUname.getText().toString().matches("[a-zA-Z]+")
     //etPwd.getText().toString().matches("[0-9]+")
     //etPwd.getText().toString().length() == 4;
+//    Intent intent = new Intent(getApplicationContext() , MainActivity2.class);
+//    startActivity(intent);
 }
